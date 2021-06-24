@@ -13,6 +13,9 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
+# Modify default DNS
+sed -i '/network.$1.netmask'/a"\\ \t\ \t\ \t\ \tset network.\$1.dns='127.0.0.1 223.5.5.5 8.8.8.8'"  package/base-files/files/bin/config_generate
+
 # WIFI ON
 sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
