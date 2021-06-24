@@ -11,7 +11,13 @@
 #
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+
+# WIFI ON
+sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+# Modify default theme
+sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 # luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git  package/diy/luci-theme-argon
