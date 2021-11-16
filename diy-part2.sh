@@ -24,6 +24,7 @@ sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 # luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git  package/diy/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/diy/luci-app-argon-config
 
 # openclash
 wget -P package/diy/openclash -c https://github.com/vernesong/OpenClash/archive/refs/heads/master.zip
@@ -37,3 +38,9 @@ popd
 
 # luci-app-aliddns
 git clone https://github.com/chenhw2/luci-app-aliddns.git  package/diy/luci-app-aliddns
+
+#openwrt-v2ray
+git clone https://github.com/kuoruan/openwrt-v2ray.git package/diy/openwrt-v2ray
+
+#luci-app-v2ray
+git clone https://github.com/kuoruan/luci-app-v2ray.git package/diy/luci-app-v2ray
